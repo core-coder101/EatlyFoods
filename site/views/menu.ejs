@@ -1,0 +1,47 @@
+<%- include('partials/header.ejs', { title: name }) %>
+
+
+
+
+<section class="menu" id="menu">
+    <div class="main-text">
+        <h1><span class="color">Eatly Foods</span> Menu</h1>
+        <p>Discover culinary sensations that have captured the hearts and palates of our discerning diners with our Most Popular Dishes. From sizzling steaks to tantalizing pastas, each dish is a celebrated masterpiece, meticulously crafted to satisfy and leave an indelible mark on your dining experience. Join the ranks of those who have savored and adored our culinary gems at Eatly Foods.</p>
+    </div>
+
+    <div class="menu-content">
+        <% products.forEach(function(product){  %>
+        <%    let item = product[0]  %>
+            <% let {name, description, price, img, rating} = item  %>
+            <div onclick="window.location.href='/details/<%= name.toLowerCase() %>'"  class="row">
+                <img src= <%= img %> >
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4> <%= name %> </h4>
+                    </div>
+            
+                    <div class="menu-right">
+                        <h5>£ <%= price %> </h5>
+                    </div>
+                </div>
+                <p> <%= description %> </p>
+                <div class="star">
+                    <% for(let i = 1; i <= rating; i++){  %>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <% }  %>
+                </div>
+            
+            </div>
+
+        <% })  %>
+
+        
+
+    </div>
+</section>
+
+
+
+
+
+<%- include('partials/footer.ejs') %>

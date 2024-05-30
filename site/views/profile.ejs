@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs', { title: title_name }) %>
+
+
+
+
+<div class="outer-div">
+
+    <div class="img-div">
+        <img src="/images/profile.png">
+        <button class="profile-btn delete-btn" onclick='window.location.href = "/delete"'>Delete Account</button>
+    </div>
+
+    <div class="user-profile-div">
+        <div class="info-div">
+            <h1 class="profile-heading">User Profile</h1>
+            <div class="profile-item">
+                <h2>Name:</h2>
+                <p><%= name %></p>
+            </div>
+            <div class="profile-item">
+                <h2>Gender:</h2>
+                <p><%= gender %></p>
+            </div>
+            <div class="profile-item">
+                <h2>Username:</h2>
+                <p><%= username %></p>
+            </div>
+            <div class="profile-item">
+                <h2>Email:</h2>
+                <p><%= email %></p>
+            </div>
+            <button class="profile-btn" onclick='window.location.href = "/profile/edit"'>Edit</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<%- include('partials/footer.ejs') %>

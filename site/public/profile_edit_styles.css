@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: none;
+}
+
+:root{
+    --text-color: #302e29;
+    --main-color: #ff0000;
+    --second-color: #858585;
+    --bg-color: #fffbf6;
+    --big-font: 4.5 rem;
+    --h2-font: 2.6 rem;
+    --p-font: 1.1 rem;
+}
+
+
+
+
+.heading{
+    font-size: 6.2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-heading{
+    font-size: 4.2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.color{
+    color: var(--main-color);
+}
+
+.p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--second-color);
+    line-height: 32px;
+    margin-bottom: 2.3rem;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+form button{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    transition: all .38s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    letter-spacing: 1px;
+}
+
+
+
+form p{
+    color: var(--second-color);
+}
+
+
+input, select, button{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+form a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+.title_div img{
+    width: 100%;
+    height: auto;
+}
+
+.profile-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-div img{
+    width: 80%;
+    height: auto;
+}
+
+.form-outer-div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-form{
+    max-width: 400px;
+    width: 60%;
+    height: auto;
+}
+
+h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.p-div{
+    width: 60%;
+}
+.p-div p{
+    color: var(--second-color);
+}

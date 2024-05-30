@@ -1,0 +1,133 @@
+<%- include('partials/header.ejs', { title: 'Home' }) %>
+
+
+
+<!-- Home Section -->
+<section class="home" id="home">
+    <div class="home-text">
+        <h1><span>Welcome</span> to The world of Tasty and Fresh Food</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <a href="#" class="btn">Book a Table</a>
+    </div>
+
+    <div class="home-img">
+        <img src="images/steak.png">
+    </div>
+
+</section>
+
+
+<!-- Container Section -->
+<section class="container">
+    <div class="main-text">
+        <h2>Breakfast</h2>
+        <p>9.00 am - 11.00 am</p>
+    </div>
+
+    <div class="container-box">
+        <div class="c-mainbox" onclick="window.location.href='/breakfast/Egg Breakfast'">
+            <div class="container-img">
+                <img src="images/breakfast.png">
+            </div>
+            <div class="container-text">
+                <p>Egg Breakfast</p>
+            </div>
+        </div>
+
+        <div class="c-mainbox" onclick="window.location.href='/breakfast/Cappuccino Coffee'">
+            <div class="container-img">
+                <img src="images/coffee.png">
+            </div>
+            <div class="container-text">
+                <p>Cappuccino Coffee</p>
+            </div>
+        </div>
+
+        <div class="c-mainbox" onclick="window.location.href='/breakfast/Green Tea'">
+            <div class="container-img">
+                <img src="images/tea.png">
+            </div>
+            <div class="container-text">
+                <p>Green Tea</p>
+            </div>
+        </div>
+
+        <div class="c-mainbox" onclick="window.location.href='/breakfast/Honey & Pancakes'">
+            <div class="container-img">
+                <img src="images/pancakes.png">
+            </div>
+            <div class="container-text">
+                <p>Honey & Pancakes</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="images/pasta.png">
+    </div>
+
+    <div class="about-text">
+        <h2>The Healty Food <br> For Wealthy Mood</h2>
+        <p>"The Healthy Food For Wealthy Mood" is not just a mantra; it's a lifestyle. Indulge in our thoughtfully curated menu, where wholesome ingredients and vibrant flavors converge to nourish your body and elevate your spirits. Every bite is a step towards wellness, ensuring that a nourished body leads to a wealthy mood—because true richness begins with good health. Embrace the journey to a wealthier, healthier you with "Eatly Foods."</p>
+        <a href="#" class="btn">Book a Table</a>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section class="menu" id="menu">
+    <div class="main-text">
+        <h1>Most Popular Dishes</h1>
+        <p>Discover culinary sensations that have captured the hearts and palates of our discerning diners with our Most Popular Dishes. From sizzling steaks to tantalizing pastas, each dish is a celebrated masterpiece, meticulously crafted to satisfy and leave an indelible mark on your dining experience. Join the ranks of those who have savored and adored our culinary gems at Eatly Foods.</p>
+    </div>
+
+    <div class="menu-content">
+        <% products.forEach(function(product){  %>
+        <%    let item = product[0]  %>
+            <% let {name, description, price, img, rating} = item  %>
+            <div onclick="window.location.href='/details/<%= name.toLowerCase() %>'"  class="row">
+                <img src= <%= img %> >
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4> <%= name %> </h4>
+                    </div>
+            
+                    <div class="menu-right">
+                        <h5>£ <%= price %> </h5>
+                    </div>
+                </div>
+                <p> <%= description %> </p>
+                <div class="star">
+                    <% for(let i = 1; i <= rating; i++){  %>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <% }  %>
+                </div>
+            
+            </div>
+
+        <% })  %>
+
+        
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer.ejs') %>

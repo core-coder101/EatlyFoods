@@ -1,0 +1,16 @@
+User Account:
+username: test
+password: 1234
+
+
+To Setup Server (make sure you're in ". . . /cw_part2_MN/site" directory):
+*write in the Bash terminal*:
+cd site
+npm init -y
+npm install bcryptjs body-parser cookie-parser dotenv ejs express express-session jsonwebtoken mysql nodemon path
+
+To Start Server:
+nodemon app.js
+or simply
+node app.js
+

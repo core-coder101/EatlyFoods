@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" , initial-scale="1">
+        <title> <%= name %> </title>
+        <link rel="stylesheet" type = "text/css" href="/style.css">
+        <link href="/profile_edit_styles.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200&display=swap"
+            rel="stylesheet">
+
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header >
+            <a href="#" class="logo"><span>Eatly Foods</span></a>
+            <ul class="profile-navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+            <div class="h-icons">
+                <!-- <a href="#" class="icons"><i class="bx bx-search"></i></a> -->
+                <a href="#" class="icons"><i class='bx bx-cart' ></i></a>
+                <a href="/profile"><i class='bx bx-user'></i></a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        <!-- I Couldn't just include the header part because some changes had to be made in head/header part -->
+    
+    
+    
+    
+    
+    
+        <div class="profile-section">
+        <div class="img-div">
+            <img src="/images/profile.png">
+            <!-- <h1 class="heading">Edit Profile</h1> -->
+        </div>
+
+        <div class="form-outer-div">
+            <div class="forms">
+                <h1 class="profile-heading">Edit Profile</h1>
+                <div class="p-div">
+                    <p>Only fill those entries which you want to change</p>
+                </div>
+
+
+                <form id="profile-form" action="/profile/edit" method="POST">
+                    <input class="my-2" name="name" type="text" placeholder=" New Name">
+                    <select class="my-2" name="gender">
+                        <option value="">New Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input class="my-2" name="username" type="text" placeholder=" New Username">
+                    <h3>Change Password</h3><p>(optional)</p>
+                    <input class="my-2" name="old_password" type="password" placeholder=" Old Password">
+                    <input class="my-2" name="new_password" type="password" placeholder=" New Password">
+                    <input class="my-2" name="new_password_confirm" type="password" placeholder=" Confirm New Password">
+                    <% if(message) { %>
+                        <h4 class="error-msg"> <%= message %> </h4>
+                    <% } %>
+                    <button class="my-2" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<%- include('partials/footer.ejs') %>
